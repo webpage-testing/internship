@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="visit.ictkerala.pages.MileStone_TestSuite">
+      <class name="visit.ictkerala.pages.LoginPage_TestSuite">
         <methods>
           <include name="setBrowser"/>
+          <include name="postUserLoginLogout_Admin"/>
           <include name="browserQuit"/>
-          <include name="select_Organisation"/>
         </methods>
-      </class> <!-- visit.ictkerala.pages.MileStone_TestSuite -->
+      </class> <!-- visit.ictkerala.pages.LoginPage_TestSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,7 +1,6 @@
 package visit.ictkerala.pages;
 
 import visit.ictkerala.pages.HomePage;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,15 +10,15 @@ public class HomePage_TestSuite extends TestBase {
 	HomePage homePageObj;
 
 	@Test(priority = 1, alwaysRun = false)
-	public void postValidateUrl() {
-		String _currenturl, _givenurl = "https://dev.visit.ictkerala.org/";
+	public void postValidate_urL() {
+		String _currenturl, _givenurl = "https://quiet-dasik-c4c3a7.netlify.app/";
 		HomePage homePageObj = new HomePage(driver);
 		_currenturl = homePageObj.driver.getCurrentUrl();
 		Assert.assertEquals(_currenturl, _givenurl);
 	}
 
 	@Test(priority = 2, alwaysRun = false)
-	public void postValidateWelcomeHomePage() {
+	public void postValidate_welcomeHomePage() {
 
 		boolean isWelcomeframeshow;
 
@@ -30,7 +29,7 @@ public class HomePage_TestSuite extends TestBase {
 	}
 
 	@Test(priority = 3, alwaysRun = false)
-	public void postValidateIctkLogo() {
+	public void postValidate_ictkLogo() {
 		boolean isBrandLogo;
 
 		HomePage homePageObj = new HomePage(driver);
@@ -40,53 +39,33 @@ public class HomePage_TestSuite extends TestBase {
 	}
 
 	@Test(priority = 4, alwaysRun = false)
-	public void postValidateWelcomeBackMsg() {
-		boolean isshowWelcomeBackMsg;
-
-		HomePage homePageObj = new HomePage(driver);
-
-		isshowWelcomeBackMsg = homePageObj.showWelcomeBackMsg();
-		Assert.assertTrue(isshowWelcomeBackMsg);
-	}
-
-	@Test(priority = 5, alwaysRun = false)
-	public void postValidateUserID() {
-		boolean isUserId;
-
-		HomePage homePageObj = new HomePage(driver);
-
-		isUserId = homePageObj.showtextBox_UserID();
-		Assert.assertTrue(isUserId);
-	}
-
-	@Test(priority = 6, alwaysRun = false)
-	public void postValidatePassword() {
-		boolean isPassword;
-
-		HomePage homePageObj = new HomePage(driver);
-
-		isPassword = homePageObj.showtextBox_Password();
-		Assert.assertTrue(isPassword);
-	}
-
-	@Test(priority = 7, alwaysRun = false)
-	public void postValidateForgotPasswordLink() {
-		boolean isforgetlink;
-
-		HomePage homePageObj = new HomePage(driver);
-
-		isforgetlink = homePageObj.showForgotPassword();
-		Assert.assertTrue(isforgetlink);
-	}
-
-	@Test(priority = 8, alwaysRun = false)
-	public void postValidateLoginbutton() {
+	public void postValidate_loginButton() {
 		boolean isbuttonlogin;
 
 		HomePage homePageObj = new HomePage(driver);
 
 		isbuttonlogin = homePageObj.button_ClickSignIn();
 		Assert.assertTrue(isbuttonlogin);
+	}
+
+	@Test(priority = 5, alwaysRun = false)
+	public void postValidate_homeButton() {
+		boolean ishomebutton;
+
+		HomePage homePageObj = new HomePage(driver);
+
+		ishomebutton = homePageObj.button_Home();
+		Assert.assertTrue(ishomebutton);
+	}
+
+	@Test(priority = 5, alwaysRun = false)
+	public void postValidate_studentSubmissionButton() {
+		boolean issubmissionbutton;
+
+		HomePage homePageObj = new HomePage(driver);
+
+		issubmissionbutton = homePageObj.button_Submissions();
+		Assert.assertTrue(issubmissionbutton);
 	}
 
 }

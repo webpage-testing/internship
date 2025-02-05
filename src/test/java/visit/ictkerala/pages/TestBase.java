@@ -17,7 +17,7 @@ public class TestBase {
 	/* Before test and browser setting */
 	@BeforeTest
 	public void setBrowser() {
-		String url = "https://dev.visit.ictkerala.org/";
+		String url = "https://quiet-dasik-c4c3a7.netlify.app/";
 
 		// ChromeDriver
 		driver = new ChromeDriver();
@@ -48,7 +48,7 @@ public class TestBase {
 		// Reset the element's style back to its original state
 		js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, originalStyle);
 	}
-	
+
 	/* After test and browser close */
 	@AfterTest
 	public void browserQuit() {
